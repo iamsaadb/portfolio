@@ -84,8 +84,6 @@
     .portrait {
       width: 250px;
       height: 250px;
-      opacity: 100%;
-      position: relative;
       background: url("../img/portrait.png");
       background-position-x: center;
       background-position-y: center;
@@ -129,5 +127,31 @@
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
     transition-delay: $x * 0.1s;
+  }
+}
+
+//Media Query Mixings
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXL {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
