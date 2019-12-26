@@ -10,7 +10,7 @@
 // Tablets & Small laptops
 @include mediaMd {
   main {
-    aligh-items: center;
+    align-items: center;
     text-align: center;
 
     .lg-heading {
@@ -46,6 +46,16 @@
       width: 150px;
     }
   }
+  .about-info {
+    justify-items: center;
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+  }
+  grid-template-columns: 1fr;
 }
 // Smartphones
 @include mediaSm {
