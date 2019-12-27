@@ -1,10 +1,16 @@
 // Wide screens
 // To use the mixings we type @include MediaXL{}
 @include mediaXL {
+  .projects {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 // Desktops & Laptops
 @include mediaLg {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Tablets & Small laptops
@@ -54,11 +60,18 @@
       "job1"
       "job2"
       "job3";
+
+    grid-template-columns: 1fr;
   }
-  grid-template-columns: 1fr;
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 // Smartphones
 @include mediaSm {
+  .projects {
+    grid-template-columns: 1fr;
+  }
   main#home h1 {
     margin-top: 10vh;
   }
